@@ -1,0 +1,18 @@
+package com.desafio.forohubalura.dto;
+
+import com.desafio.forohubalura.model.Curso;
+import com.desafio.forohubalura.model.StatusTopico;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record DatosRegistroTopico(
+        @NotBlank(message = "El título es obligatorio.")
+        String titulo,
+        @NotBlank(message = "El mensaje es obligatorio.")
+        String autor,
+        @NotNull(message = "El curso es obligatorio.")
+        Curso curso,
+        StatusTopico statusTopico
+) {
+
+}
